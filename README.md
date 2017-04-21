@@ -1,3 +1,3 @@
 # C_File---File-Manipulation
 
-Simple program on C language to Write data on file.
+Programa Simples para Manipulação de arquivo em C
