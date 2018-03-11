@@ -16,21 +16,21 @@ int main(void) {
     void acessarFile3(FILE *arquivo_copia,char copia_nome[100],char copia_sexo,int j_copia);
     void definirEstado(char copia_sexo,float copia_imc);
 
-    // Declaração das variáveis
-    FILE *Arquivo; // cria variável ponteiro para o arquivo
+    // DeclaraÃ§Ã£o das variÃ¡veis
+    FILE *Arquivo; // cria variÃ¡vel ponteiro para o arquivo
      int i, j;
-     printf("Quantas Pessoas voc� quer calcular o 'IMC': ");
+     printf("Quantas Pessoas você quer calcular o 'IMC': ");
 
     scanf("%d", &i);
     
     printf("\n\n");
-    struct Cadastrar { // struct para cadastrar as informações necessarias do usuario;
+    struct Cadastrar { // struct para cadastrar as informaÃ§Ãµes necessarias do usuario;
         char nome[100];
         float peso ;
         float altura;
         int idade;
         char sexo;
-        float imc; // obtem a massa corporea em uma variável;
+        float imc; // obtem a massa corporea em uma variÃ¡vel;
     };
     struct Cadastrar pessoas[i];
    
@@ -45,7 +45,7 @@ int main(void) {
         #ifdef __linux__
         __fpurge(stdin);
         #endif
-        printf("INFORME O NOME DA %d� PESSOA:\n",j+1);
+        printf("INFORME O NOME DA %dº PESSOA:\n",j+1);
         gets(pessoas[j].nome); // guarda o nome da pessoa com base na valor do looping
 
 
@@ -97,7 +97,7 @@ int main(void) {
         acessarFile2(Arquivo,pessoas[j].idade);
 
         printf("\n\n");
-        printf("IMC DE %s � %.1f\n",pessoas[j].nome,pessoas[j].imc);
+        printf("IMC DE %s é %.1f\n",pessoas[j].nome,pessoas[j].imc);
         definirEstado(pessoas[j].sexo,pessoas[j].imc);
         
         printf("Pessoa cadastrada com sucesso!\n\n");
@@ -111,12 +111,9 @@ int main(void) {
         system("clear");
         #endif
     }
-    printf("\t-------EQUIPE----------\n");
+    printf("\t-------Create by----------\n");
     printf("\tLuiz Eduardo(161052088)\n");
-    printf("\t------Raul Ferreira----\n");
-    printf("\tRafael Paulo(161051535)\n");
-    printf("\t---Tiago Arag�o Barro--\n");
-    printf("\t------Breno Nunes------\n");
+   
     system("pause");
     
     return (0);
@@ -134,7 +131,7 @@ void acessarFile3(FILE *arquivo_copia,char copia_nome[100],char copia_sexo,int j
     }
 
 
-    fprintf(arquivo_copia,"CADASTRO DA %d� PESSOA\n\n",j_copia);
+    fprintf(arquivo_copia,"CADASTRO DA %dº PESSOA\n\n",j_copia);
     //usando fprintf para armazenar para escrever no arquivo
     fprintf(arquivo_copia, "NOME: %s\nSEXO: %c\n",copia_nome,copia_sexo);
 
